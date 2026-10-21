@@ -34,7 +34,7 @@ npm run preview
 2. 把 `dist/` **目录内的全部文件**部署到网站根目录，包括 `index.html`、`assets/`、`models/car-concept.glb` 和 `favicon.svg`；生产网站无需 Node.js 常驻进程。
 3. 使用 HTTPS 打开网站，检查车型加载、材质切换、模型来源链接、中文/英文及控制面板。部署后仍需在真实手机上检查触摸、安全区和性能。
 
-当前资源地址以网站根路径 `/models/...` 等形式引用，因此建议部署在域名根目录；如需部署在子路径，须同时调整 Vite `base` 与模型资源路径。
+普通构建默认以网站根路径 `/` 发布；GitHub Pages 构建使用 `/car-atelier/`。模型及前端资源路径会随 Vite `BASE_URL` 自动调整；部署到其他子路径时需修改 `vite.config.ts` 的 `base` 配置。
 
 ## GitHub Pages 预览
 
@@ -43,6 +43,8 @@ npm run preview
 通过 `.github/workflows/deploy-pages.yml` 在 `main` 分支推送时自动执行 `npm ci`、Vite 构建并部署 GitHub Pages，预览地址为：
 
 https://duanxirui.github.io/car-atelier/
+
+2026-10-21 已通过 [GitHub Actions 部署记录](https://github.com/duanxirui/car-atelier/actions/runs/39547914735)确认成功；公网首页及 `models/car-concept.glb` 均已返回 HTTP 200。
 
 Pages 构建设置 `GITHUB_PAGES=true`，自动使用 `/car-atelier/` 作为基础路径，确保 JS、CSS、图标和 GLB 资源均在项目子路径下加载。普通本地构建继续使用根路径 `/`。
 
