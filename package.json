@@ -1,0 +1,24 @@
+{
+  "name": "threejs-car-showroom",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ./node_modules/vite/bin/vite.js --host 0.0.0.0",
+    "build": "node ./node_modules/typescript/bin/tsc --noEmit && node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview --host 0.0.0.0",
+    "typecheck": "node ./node_modules/typescript/bin/tsc --noEmit"
+  },
+  "dependencies": {
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.180.0",
+    "meshoptimizer": "^0.22.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.12"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}
