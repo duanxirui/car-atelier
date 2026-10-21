@@ -18,7 +18,7 @@ export const cars: readonly CarConfig[] = [
       zh: '来自 Khronos glTF Sample Assets 的高精度概念跑车，具有精细内饰、玻璃和真实 PBR 车漆。它是开放授权的技术展示模型，并非汽车制造商品牌授权车型。',
       en: 'A high-fidelity concept sports car from Khronos glTF Sample Assets, featuring detailed interiors, glazing and physically based paint. This is a licensed technical sample, not a car manufacturer’s officially endorsed model.',
     },
-    modelUrl: '/models/car-concept.glb',
+    modelUrl: `${import.meta.env.BASE_URL}models/car-concept.glb`,
     modelKind: 'gltf',
     paintMaterialNames: ['Paint 1 Carmine', 'Paint 2 Carmine'],
     materialVariants: [

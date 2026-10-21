@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  // Keep local development and ordinary root-domain deployments unchanged.
+  // GitHub Pages serves this project at /car-atelier/.
+  base: process.env.GITHUB_PAGES === 'true' ? '/car-atelier/' : '/',
   build: {
     rollupOptions: {
       output: {

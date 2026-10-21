@@ -59,7 +59,7 @@ export class ShowroomUI {
       '  <div class="scene-vignette" aria-hidden="true"></div>',
       '  <div class="scene-grain" aria-hidden="true"></div>',
       '  <header class="site-header">',
-      '    <a class="brand" href="/" aria-label="CAR ATELIER">',
+      '    <a class="brand" href="' + import.meta.env.BASE_URL + '" aria-label="CAR ATELIER">',
       '      <span class="brand-symbol" aria-hidden="true">' + icon('brand') + '</span>',
       '      <span class="brand-copy"><strong>CAR ATELIER</strong><small data-i18n="tagline"></small></span>',
       '    </a>',

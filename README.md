@@ -36,6 +36,18 @@ npm run preview
 
 当前资源地址以网站根路径 `/models/...` 等形式引用，因此建议部署在域名根目录；如需部署在子路径，须同时调整 Vite `base` 与模型资源路径。
 
+## GitHub Pages 预览
+
+代码仓库：[duanxirui/car-atelier](https://github.com/duanxirui/car-atelier)。
+
+通过 `.github/workflows/deploy-pages.yml` 在 `main` 分支推送时自动执行 `npm ci`、Vite 构建并部署 GitHub Pages，预览地址为：
+
+https://duanxirui.github.io/car-atelier/
+
+Pages 构建设置 `GITHUB_PAGES=true`，自动使用 `/car-atelier/` 作为基础路径，确保 JS、CSS、图标和 GLB 资源均在项目子路径下加载。普通本地构建继续使用根路径 `/`。
+
+如首次部署未能自动启用 Pages，请打开仓库的 **Settings → Pages → Build and deployment**，将 Source 选择为 **GitHub Actions**，然后在 **Actions → Deploy GitHub Pages** 中重新运行工作流。正式发布后仍需进行真实手机和浏览器兼容性验收。
+
 ## 文档
 
 从[文档中心](docs/README.md)统一进入：[开发方案](docs/development-scheme.md)记录技术设计、工程结构、模型接入与素材授权；[开发计划](docs/development-plan.md)记录阶段状态、待办与车型调查；`docs/plans/` 按日期记录实际完成的功能、修改与验证结果。文档维护规则也在文档中心。
